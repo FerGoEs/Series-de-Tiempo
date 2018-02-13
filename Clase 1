@@ -1,0 +1,74 @@
+# Funciones basicas #
+#Directorio de trabajo
+
+setwd("C:/Users/Sala-D18/Documents/Series-Fer")
+getwd()
+
+
+#Calculadora#
+
+3+4
+3^4
+3*4-1+2
+
+
+sqrt(10) #raiz cuadrada
+exp(10)  #exponencial
+log(10)  #logaritmo base e
+
+log(10,10) 
+log(10,base = 10)
+
+# Asignacion #
+x<- 1000
+x+3
+
+# Operadores de asignacion de valores a un objeto #
+y<-3
+n<-34
+
+# Vector : Operador c, concatenar elementos o vectores #
+
+salarios<-c(40000,50000,55000)
+
+salarios1<-c(40000,50000,55000)
+salarios2<-c(40000,55000,50000)
+
+# Convinar vectores
+
+salarios3<-c(40000,50000,55000)
+salarios4<-c(10000,15000,20000)
+salarios5<-c(salarios3,salarios4)
+
+#Vectores con distitos tipos de datos
+alumnos<-c("Elisa","Bonifacio", "Edgar")
+alumno.salarios<-c("Elisa","Bonifacio", "Edgar",40000,50000,55000)
+
+# Funciones y vectores #
+sum(salarios3)
+length(salarios3)
+sum(salarios3)/length(salarios3)
+mean(salarios3)
+
+# Varianza #
+x=c(20,22,24,26,28)
+mediax<-mean(x)
+(x-mediax)^2 #Diferencias al cuadrado
+sum((x-mediax)^2) # Suma de Diferencias al Cuadrado
+n=length(x)
+sum((x-mediax)^2)/(n-1)
+
+var(x)
+sd(x)
+
+
+#################################################################
+# Instalacion de paquetes
+install.packages("Giza")
+#Apertura de Libreria
+library (Giza)
+
+# Formato cvs
+install.packages("readr")
+library (readr)
+datos_csv <- read.csv()

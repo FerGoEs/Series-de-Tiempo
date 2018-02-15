@@ -1,0 +1,45 @@
+require(readxl)
+datos_excel<-read_excel("C:/Users/Sala-D18/Documents/Series-Fer/petroleo.xlsx")
+
+##################################################################
+#Algunos graficos sencillos
+plot() # Graficos 
+hist()
+boxplot()
+barplot()
+
+set.seed(12345) # Funcion para generar aleatorios #
+variable_y<-rnorm(30) # Tenemos que tener un generador de numeros #
+plot(variable_y)
+windows() 
+x11() # Ventana paralela de graficado 
+
+
+xv<-seq(-3,3,0.01)
+yv<-dnorm(xv)
+plot(xv,yv,type="l" , col=3 , main = "Distribucion Normal",
+     ylab = "Kilo de Oro", xlab = "Periodo")
+# Tipo de grafica de acuerdo al modelo #
+
+#Types = c("c" , "l" , "b" , "c" , "o" , "h" , "s" , "S" , "n")
+
+
+######################################################
+attach(mtcars)
+windows()
+par(mfrow=c(3,1))
+hist(wt)        
+hist(mpg)
+hist(disp)
+
+attach(mtcars)
+layout(matrix(c(1,1,2,3), 2,2, byrow = TRUE)) # Graficos en un solo lienzo 
+hist(wt)
+hist(mpg)
+hist(disp)
+
+require(readxl)
+petroleo<-read_excel("C:/Users/Sala-D18/Documents/Series-Fer/petroleo.xlsx")
+petroleo.ts<-ts(petroleo)
+petroleo.ts # Ts= timeseries (Convertirlo en series de tiempo)
+plot(petroleo.ts, xlab = "Tiempo", ylab = "Precio del barril", main = "Precio del barril del petroleo")
